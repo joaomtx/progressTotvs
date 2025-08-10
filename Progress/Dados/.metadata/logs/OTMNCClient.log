@@ -1,0 +1,21 @@
+======================================================================
+[25/08/09@22:34:45.169-0300] JAVA 1 [IPCLogSink] 0 C:\Dados\.metadata\logs\OTMNCClient.log opened.
+[25/08/09@22:34:45.169-0300] JAVA 1 [IPCLogSink] 0 Logging level set to = 2
+[25/08/09@22:34:51.477-0300] JAVA 1 [IPCTcpWorker - 1] -1 Read 0 bytes from socket channel: java.nio.channels.SocketChannel[connected local=/192.168.56.1:61974 remote=ASUSS/192.168.56.1:10000] but expected -1
+[25/08/09@22:34:51.482-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: Connection closed by peer
+[25/08/09@22:34:51.484-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: This thread has been stopped
+[25/08/09@22:34:52.154-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: Attempting to send a message on a client that is not connected
+======================================================================
+[25/08/09@22:45:50.835-0300] JAVA 1 [IPCLogSink] 0 C:\Dados\.metadata\logs\OTMNCClient.log opened.
+[25/08/09@22:45:50.836-0300] JAVA 1 [IPCLogSink] 0 Logging level set to = 2
+[25/08/09@22:45:56.791-0300] JAVA 1 [IPCTcpWorker - 1] -1 Read 0 bytes from socket channel: java.nio.channels.SocketChannel[connected local=/192.168.56.1:62367 remote=ASUSS/192.168.56.1:10000] but expected -1
+[25/08/09@22:45:56.799-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: Connection closed by peer
+[25/08/09@22:45:56.799-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: This thread has been stopped
+[25/08/09@22:45:57.013-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: Attempting to send a message on a client that is not connected
+======================================================================
+[25/08/09@22:47:22.104-0300] JAVA 1 [IPCLogSink] 0 C:\Dados\.metadata\logs\OTMNCClient.log opened.
+[25/08/09@22:47:22.105-0300] JAVA 1 [IPCLogSink] 0 Logging level set to = 2
+[25/08/09@22:47:28.231-0300] JAVA 1 [IPCTcpWorker - 1] -1 Read 0 bytes from socket channel: java.nio.channels.SocketChannel[connected local=/192.168.56.1:62461 remote=ASUSS/192.168.56.1:10000] but expected -1
+[25/08/09@22:47:28.240-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: Connection closed by peer
+[25/08/09@22:47:28.240-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: This thread has been stopped
+[25/08/09@22:47:28.457-0300] JAVA 2 [IPCClient - 1] -1 com.progress.ipccom.IPCException: Attempting to send a message on a client that is not connected
