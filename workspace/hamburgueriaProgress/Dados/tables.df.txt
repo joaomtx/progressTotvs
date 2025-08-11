@@ -1,0 +1,115 @@
+/* ===========================
+   Tabela: Cidades
+   =========================== */
+CREATE TABLE Cidades
+  FIELD CodCidade AS INTEGER
+      LABEL "Código"
+      FORMAT ">>>>9"
+      MANDATORY
+  FIELD NomeCidade AS CHARACTER
+      LABEL "Cidade"
+      FORMAT "X(30)"
+      MANDATORY.
+
+ADD UNIQUE INDEX pk_Cidades CodCidade.
+
+---
+
+/* ===========================
+   Tabela: Produtos
+   =========================== */
+CREATE TABLE Produtos
+  FIELD CodProduto AS INTEGER
+      LABEL "Código"
+      FORMAT ">>>>9"
+      MANDATORY
+  FIELD Descricao AS CHARACTER
+      LABEL "Descrição"
+      FORMAT "X(40)"
+      MANDATORY
+  FIELD Preco AS DECIMAL
+      LABEL "Preço"
+      FORMAT ">>,>>9.99"
+      MANDATORY.
+
+ADD UNIQUE INDEX pk_Produtos CodProduto.
+
+---
+
+/* ===========================
+   Tabela: Clientes
+   =========================== */
+CREATE TABLE Clientes
+  FIELD CodCliente AS INTEGER
+      LABEL "Código"
+      FORMAT ">>>>9"
+      MANDATORY
+  FIELD NomeCliente AS CHARACTER
+      LABEL "Nome"
+      FORMAT "X(40)"
+      MANDATORY
+  FIELD CodCidade AS INTEGER
+      LABEL "Cidade"
+      FORMAT ">>>>9"
+      MANDATORY.
+
+ADD UNIQUE INDEX pk_Clientes CodCliente.
+ADD INDEX ix_Cidade CodCidade.
+
+---
+
+/* ===========================
+   Tabela: Pedidos
+   =========================== */
+CREATE TABLE Pedidos
+  FIELD CodPedido AS INTEGER
+      LABEL "Código"
+      FORMAT ">>>>9"
+      MANDATORY
+  FIELD CodCliente AS INTEGER
+      LABEL "Cliente"
+      FORMAT ">>>>9"
+      MANDATORY
+  FIELD DataPedido AS DATE
+      LABEL "Data"
+      FORMAT "99/99/9999"
+      MANDATORY.
+
+ADD UNIQUE INDEX pk_Pedidos CodPedido.
+ADD INDEX ix_Cliente CodCliente.
+
+---
+
+/* ===========================
+   Tabela: Itens
+   =========================== */
+CREATE TABLE Itens
+  FIELD CodPedido AS INTEGER
+      LABEL "Pedido"
+      FORMAT ">>>>9"
+      MANDATORY
+  FIELD CodProduto AS INTEGER
+      LABEL "Produto"
+      FORMAT ">>>>9"
+      MANDATORY
+  FIELD Quantidade AS INTEGER
+      LABEL "Qtd"
+      FORMAT ">>9"
+      MANDATORY
+  FIELD PrecoUnit AS DECIMAL
+      LABEL "Preço"
+      FORMAT ">>,>>9.99"
+      MANDATORY.
+
+ADD INDEX ix_Pedido CodPedido.
+ADD INDEX ix_Produto CodProduto.
+
+---
+
+/* ===========================
+   Sequences
+   =========================== */
+CREATE SEQUENCE seqCidade.
+CREATE SEQUENCE seqProduto.
+CREATE SEQUENCE seqCliente.
+CREATE SEQUENCE seqPedido.

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<Configuration status="INFO">
+	<!-- Logging properties -->
+	<Properties>
+		<Property name="LOG_PATTERN">[%d{dd-MMM-yyyy HH:mm:ss:SSS}] [%t] [%p] [%c{1}:%L] - %X - %m%n</Property>
+		<Property name="BASE_PATH">${sys:log.location:-.}/logs</Property>
+	</Properties>
+
+	<!-- All appenders, each one for one logger -->
+	<Appenders>
+		<RollingFile name="ABLDoc"
+			fileName="${BASE_PATH}/ABLDoc.log"
+			filePattern="${BASE_PATH}/ABLDoc-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+		<RollingFile name="ABLUnit"
+			fileName="${BASE_PATH}/ABLUnit.log"
+			filePattern="${BASE_PATH}/ABLUnit-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+		<RollingFile name="ABLWebApp"
+			fileName="${BASE_PATH}/ABLWebApp.log"
+			filePattern="${BASE_PATH}/ABLWebApp-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+		<RollingFile name="AppBuilder"
+			fileName="${BASE_PATH}/AppBuilder.log"
+			filePattern="${BASE_PATH}/AppBuilder-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+		<RollingFile name="ClassicDataObject"
+			fileName="${BASE_PATH}/ClassicDataObject.log"
+			filePattern="${BASE_PATH}/ClassicDataObject-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+		<RollingFile name="ClassicRest"
+			fileName="${BASE_PATH}/ClassicRest.log"
+			filePattern="${BASE_PATH}/ClassicRest-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+		<RollingFile name="ClassicWebSpeed"
+			fileName="${BASE_PATH}/ClassicWebSpeed.log"
+			filePattern="${BASE_PATH}/ClassicWebSpeed-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+		
+		<RollingFile name="Debugger"
+			fileName="${BASE_PATH}/Debugger.log"
+			filePattern="${BASE_PATH}/Debugger-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+
+		<RollingFile name="FindReferences"
+			fileName="${BASE_PATH}/FindReferences.log"
+			filePattern="${BASE_PATH}/FindReferences-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+
+		<RollingFile name="PASServer"
+			fileName="${BASE_PATH}/PASServer.log"
+			filePattern="${BASE_PATH}/PASServer-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+
+		<RollingFile name="Profiler"
+			fileName="${BASE_PATH}/Profiler.log"
+			filePattern="${BASE_PATH}/Profiler-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+
+		<RollingFile name="VisualDesigner"
+			fileName="${BASE_PATH}/VisualDesigner.log"
+			filePattern="${BASE_PATH}/VisualDesigner-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+
+		<RollingFile name="WebUI"
+			fileName="${BASE_PATH}/WebUI.log"
+			filePattern="${BASE_PATH}/WebUI-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+	</Appenders>
+	
+	<!-- Logger For Each feature -->
+	<Loggers>
+		<Logger name="ABLDoc" additivity="false" level="error">
+			<AppenderRef ref="ABLDoc" />
+		</Logger>
+		
+		<Logger name="ABLUnit" additivity="false" level="error">
+			<AppenderRef ref="ABLUnit" />
+		</Logger>
+
+		<Logger name="ABLWebApp" additivity="false" level="error">
+			<AppenderRef ref="ABLWebApp" />
+		</Logger>
+
+		<Logger name="AppBuilder" additivity="false" level="error">
+			<AppenderRef ref="AppBuilder" />
+		</Logger>
+
+		<Logger name="ClassicDataObject" additivity="false" level="error">
+			<AppenderRef ref="ClassicDataObject" />
+		</Logger>
+
+		<Logger name="ClassicRest" additivity="false" level="error">
+			<AppenderRef ref="ClassicRest" />
+		</Logger>
+
+		<Logger name="ClassicWebSpeed" additivity="false" level="error">
+			<AppenderRef ref="ClassicWebSpeed" />
+		</Logger>
+
+		<Logger name="Debugger" additivity="false" level="error">
+			<AppenderRef ref="Debugger" />
+		</Logger>
+
+		<Logger name="FindReferences" additivity="false" level="error">
+			<AppenderRef ref="FindReferences" />
+		</Logger>
+
+		<Logger name="PASServer" additivity="false" level="error">
+			<AppenderRef ref="PASServer" />
+		</Logger>
+
+		<Logger name="Profiler" additivity="false" level="error">
+			<AppenderRef ref="Profiler" />
+		</Logger>
+
+		<Logger name="VisualDesigner" additivity="false" level="error">
+			<AppenderRef ref="VisualDesigner" />
+		</Logger>
+
+		<Logger name="WebUI" additivity="false" level="error">
+			<AppenderRef ref="WebUI" />
+		</Logger>
+	</Loggers>
+	
+</Configuration>

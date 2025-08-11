@@ -1,0 +1,2 @@
+TRIGGER PROCEDURE FOR CREATE OF Cidades.
+ASSIGN cidades.CodCidade = NEXT-VALUE(SeqCidade).

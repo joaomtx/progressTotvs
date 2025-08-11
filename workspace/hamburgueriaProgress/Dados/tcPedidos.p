@@ -1,0 +1,2 @@
+TRIGGER PROCEDURE FOR CREATE OF Pedidos.
+ASSIGN Pedidos.CodPedido = NEXT-VALUE(SeqPedido).
